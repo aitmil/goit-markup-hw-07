@@ -1,0 +1,56 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .hero-section {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  .value-list-item::before {
+    content: '';
+    display: block;
+    height: 112px;
+    margin-bottom: 8px;
+
+    background-color: var(--secondary-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px 64px;
+  }
+  .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+  }
+
+  .icon-clock::before {
+    background-image: url(../images/clock.svg);
+  }
+
+  .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+  }
+
+  .icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
+  }
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 24px;
+  }
+
+  .modal-policy-link {
+    margin-left: 5px;
+  }
+}

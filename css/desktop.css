@@ -10,82 +10,19 @@
 
   /*----------------HEADER----------------*/
 
-  .header-wrap {
-    display: flex;
-    align-items: center;
-  }
-
-  .header-navigation {
-    display: flex;
-    gap: 76px;
-    align-items: center;
-  }
-
-  .header-list {
-    display: flex;
-    gap: 40px;
-  }
-
-  .header-address {
-    display: inline-block;
-    margin-left: auto;
-  }
   .header-address-list {
     display: flex;
     gap: 40px;
   }
 
-  .header-logo {
-    display: block;
+  .header-link.phone,
+  .header-link.mail {
     padding-top: 24px;
     padding-bottom: 24px;
-    color: var(--secondary-logo-color);
-  }
+    margin-bottom: 0;
 
-  .header-link {
-    position: relative;
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    color: var(--primary-header-link-color);
-
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .header-link:hover,
-  .header-link:focus,
-  .header-link.current {
-    color: var(--primary-accent-color);
-  }
-
-  .current::after {
-    content: '';
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-
-    background-color: var(--secondary-accent-color);
-  }
-
-  .mail,
-  .phone {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    font-style: normal;
-    color: var(--secondary-header-link-color);
   }
 
   /*------------MAIN PAGE-HERO------------*/
@@ -94,6 +31,25 @@
     max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
+
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg\ 2x.jpg);
+    }
   }
 
   .hero-title {
@@ -102,14 +58,6 @@
 
     font-size: 56px;
     line-height: 1.07;
-  }
-
-  .hero-btn {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hero-btn:is(:hover, :focus) {
-    background-color: var(--secondary-accent-color);
   }
 
   /*------------MAIN PAGE-VALUES------------*/
@@ -177,29 +125,6 @@
     width: calc((100%-48px) / 3);
   }
 
-  /*------------MAIN PAGE-TEAM------------*/
-
-  .social-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .social-item:is(:hover, :focus) .social-link {
-    background-color: var(--secondary-accent-color);
-  }
-
-  /*----------------CUSTOMERS---------------*/
-
-  .customers-link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .customers-link:hover,
-  .customers-link:focus {
-    border-color: var(--secondary-accent-color);
-    color: var(--secondary-accent-color);
-  }
-
   /*----------------FOOTER---------------*/
 
   .footer > .container {
@@ -219,30 +144,6 @@
     margin-right: 56px;
   }
 
-  .media-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .social-item:is(:hover, :focus) .media-link {
-    background-color: #31d0aa;
-  }
-
-  .footer-input {
-    transition: border-colorr 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .footer-input:focus {
-    border-color: var(--primary-accent-color);
-  }
-
-  .subscribe-btn {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .subscribe-btn:is(:hover, :focus) {
-    background-color: var(--secondary-accent-color);
-  }
-
   /*---------------MODAL----------------*/
 
   .modal {
@@ -253,5 +154,23 @@
 
   .modal-policy-link {
     margin-left: 5px;
+  }
+
+  /*---------------PORTFOLIO----------------*/
+
+  .gallery-section {
+    padding-top: 96px;
+  }
+
+  .filter-list {
+    margin-bottom: 72px;
+  }
+
+  .gallery-list {
+    row-gap: 24px;
+  }
+
+  .gallery-list-item {
+    flex-basis: calc(100% / 3 - 24px);
   }
 }
